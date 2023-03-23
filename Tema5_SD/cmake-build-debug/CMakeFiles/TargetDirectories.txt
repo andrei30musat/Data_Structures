@@ -1,0 +1,3 @@
+/Users/andreimusat/CLionProjects/Tema5_SD/cmake-build-debug/CMakeFiles/Tema5_SD.dir
+/Users/andreimusat/CLionProjects/Tema5_SD/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/andreimusat/CLionProjects/Tema5_SD/cmake-build-debug/CMakeFiles/rebuild_cache.dir
