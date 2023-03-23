@@ -17,43 +17,43 @@ void Afisare(Nod *elem) {
     cout << endl;
 }
 
-void Insert(Nod *&cap, int valoare) {
-    //cap este primul element din lista
-    Nod *elem_final = new Nod;
-    elem_final->info = valoare;
-    elem_final->next = nullptr;
-    elem_final->prev = nullptr;
+void Insert(Nod *&head, int valoare) {
+    //head este primul element din lista
+    Nod *ultimul_element = new Nod;
+    ultimul_element->info = valoare;
+    ultimul_element->next = nullptr;
+    ultimul_element->prev = nullptr;
 
-    if (cap == nullptr) // In cazul in care lista noastra este vida, punem elementul in lista
-        cap = elem_final;
+    if (head == nullptr) // In cazul in care lista noastra este vida, punem elementul in lista
+        head = ultimul_element;
     else {
         //Parcurgem lista pana la final
-        Nod *nod_curent = cap;
+        Nod *nod_curent = head;
         while (nod_curent->next != nullptr)
             nod_curent = nod_curent->next;
 
         //Mutam sageata ultimului element catre elementul creat anterior
-        nod_curent->next = elem_final;
-        elem_final->prev = nod_curent;
+        nod_curent->next = ultimul_element;
+        ultimul_element->prev = nod_curent;
     }
 
 
-    Nod *elem = new Nod();
-    elem->info = -valoare;
+    Nod *primul_element = new Nod();
+    primul_element->info = -valoare;
 
-    elem->next = cap;
-    elem->prev = nullptr;
+    primul_element->next = head;
+    primul_element->prev = nullptr;
 
-    cap = elem;
+    head = primul_element;
 }
 
-void Extract(Nod *&cap) {
-    Nod *prima_victima = cap;
-    cap = cap->next;
-    cap->prev = nullptr;
+void Extract(Nod *&head) {
+    Nod *prima_victima = head;
+    head = head->next;
+    head->prev = nullptr;
     delete prima_victima;
 
-    Nod *ultima_victima = cap;
+    Nod *ultima_victima = head;
     while (ultima_victima->next != nullptr)
         ultima_victima = ultima_victima->next;
 
