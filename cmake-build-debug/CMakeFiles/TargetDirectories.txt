@@ -1,3 +1,0 @@
-/Users/andreimusat/CLionProjects/Data_Structure/cmake-build-debug/CMakeFiles/Data_Structure.dir
-/Users/andreimusat/CLionProjects/Data_Structure/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/andreimusat/CLionProjects/Data_Structure/cmake-build-debug/CMakeFiles/rebuild_cache.dir
